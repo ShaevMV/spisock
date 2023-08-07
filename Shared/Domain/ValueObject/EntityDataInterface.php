@@ -1,6 +1,6 @@
 <?php
 
-namespace Shared\Domain\Entity;
+namespace Shared\Domain\ValueObject;
 
 interface EntityDataInterface
 {

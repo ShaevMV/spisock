@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Shared\Domain\ValueObject;
 
 use InvalidArgumentException;
-use Shared\Domain\Entity\EntityDataInterface;
 
 final class Status implements EntityDataInterface
 {

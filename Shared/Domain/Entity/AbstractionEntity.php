@@ -6,6 +6,7 @@ namespace Shared\Domain\Entity;
 use Carbon\Carbon;
 use Nette\Utils\Json;
 use Nette\Utils\JsonException;
+use Shared\Domain\ValueObject\EntityDataInterface;
 use Shared\Domain\ValueObject\Uuid;
 
 abstract class AbstractionEntity implements EntityInterface

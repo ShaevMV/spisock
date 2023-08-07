@@ -21,4 +21,10 @@ interface EntityInterface
      * Вывести объект в виде json
      */
     public function toJson(): string;
+
+    /**
+     * @param array<string, mixed> $data
+     * @return self
+     */
+    public static function fromState(array $data): EntityInterface;
 }
