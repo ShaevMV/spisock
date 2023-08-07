@@ -24,6 +24,7 @@ abstract class AbstractionEntity implements EntityInterface
     /**
      * Вывести сущность в виде массива
      * @throws JsonException
+     * @return array<string, mixed>
      */
     public function toArray(): array
     {
@@ -51,6 +52,12 @@ abstract class AbstractionEntity implements EntityInterface
         return $array;
     }
 
+    /**
+     * @param array<string, mixed> $array
+     * @param string $key
+     * @param mixed $value
+     * @return void
+     */
     private function addItems(array &$array, string $key, mixed $value): void
     {
         if ($value instanceof EntityInterface) {

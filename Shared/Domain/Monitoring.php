@@ -14,5 +14,8 @@ interface Monitoring
 
     public function setGauge(int $value): void;
 
+    /**
+     * @param array<int,string> $labels
+     */
     public function observeHistogram(int $value, array $labels = []): void;
 }

@@ -20,6 +20,9 @@ final class FilterOperator extends Enum
     public const LT           = '<';
     public const CONTAINS     = 'CONTAINS';
     public const NOT_CONTAINS = 'NOT_CONTAINS';
+    /**
+     * @var array|string[]
+     */
     private static array $containing = [self::CONTAINS, self::NOT_CONTAINS];
 
     public function isContaining(): bool
@@ -27,7 +30,7 @@ final class FilterOperator extends Enum
         return in_array($this->value(), self::$containing, true);
     }
 
-    protected function throwExceptionForInvalidValue($value): void
+    protected function throwExceptionForInvalidValue(string $value): void
     {
         throw new InvalidArgumentException(sprintf('The filter <%s> is invalid', $value));
     }

@@ -8,6 +8,9 @@ use InvalidArgumentException;
 
 final class Assert
 {
+    /**
+     * @param array<int, mixed> $items
+     */
     public static function arrayOf(string $class, array $items): void
     {
         foreach ($items as $item) {
@@ -15,7 +18,7 @@ final class Assert
         }
     }
 
-    public static function instanceOf(string $class, $item): void
+    public static function instanceOf(string $class, mixed $item): void
     {
         if (!$item instanceof $class) {
             throw new InvalidArgumentException(

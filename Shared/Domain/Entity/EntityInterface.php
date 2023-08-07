@@ -4,9 +4,9 @@ namespace Shared\Domain\Entity;
 
 interface EntityInterface
 {
-
     /**
      * Преобразовать значения сущности в массив
+     * @return null|array<string, mixed>
      */
     public function toArray(): ?array;
 

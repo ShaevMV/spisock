@@ -9,9 +9,8 @@ use ReflectionException;
 
 class EntityMapping
 {
-
     /**
-     * @param  EntityInterface[]  $dtoList
+     * @param  array<string|int,EntityInterface> $dtoList
      */
     public static function flat(array $dtoList): array
     {

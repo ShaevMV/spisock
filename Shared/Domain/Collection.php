@@ -10,6 +10,9 @@ use IteratorAggregate;
 
 abstract class Collection implements Countable, IteratorAggregate
 {
+    /**
+     * @param array<int, mixed> $items
+     */
     public function __construct(private array $items)
     {
         Assert::arrayOf($this->type(), $items);
@@ -27,6 +30,9 @@ abstract class Collection implements Countable, IteratorAggregate
         return count($this->items());
     }
 
+    /**
+     * @return array<int, mixed>
+     */
     protected function items(): array
     {
         return $this->items;

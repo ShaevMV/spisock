@@ -19,7 +19,7 @@ abstract class Enum implements Stringable
         $this->ensureIsBetweenAcceptedValues($value);
     }
 
-    abstract protected function throwExceptionForInvalidValue($value);
+    abstract protected function throwExceptionForInvalidValue(string $value);
 
     public static function __callStatic(string $name, $args)
     {

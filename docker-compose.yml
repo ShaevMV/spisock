@@ -33,6 +33,7 @@ services:
             - backend
         links:
             - rabbitmq
+            - mysql
 
     worker:
         build:
@@ -79,7 +80,7 @@ services:
         ports:
             - "3306:3306"
         environment:
-            MYSQL_DATABASE: 'list'
+            MYSQL_DATABASE: 'spisok'
             MYSQL_ROOT_PASSWORD: 'secret'
             MYSQL_USER: 'default'
             MYSQL_PASSWORD: 'secret'
